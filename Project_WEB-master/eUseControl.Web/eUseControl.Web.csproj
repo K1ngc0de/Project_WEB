@@ -5511,7 +5511,7 @@
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_RightMenu.cshtml" />
     <Content Include="Views\Home\Invoice.cshtml" />
-    <Content Include="Views\Shared\_LayoutIvoice.cshtml" />
+    <Content Include="Views\Shared\_LayoutInvoice.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
