@@ -5466,17 +5466,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\EightController.cs" />
-    <Compile Include="Controllers\ElevenController.cs" />
-    <Compile Include="Controllers\FiveController.cs" />
-    <Compile Include="Controllers\FourController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InvoiceController.cs" />
-    <Compile Include="Controllers\NineController.cs" />
-    <Compile Include="Controllers\SevenController.cs" />
-    <Compile Include="Controllers\SixController.cs" />
-    <Compile Include="Controllers\TenController.cs" />
-    <Compile Include="Controllers\ThreeController.cs" />
+    <Compile Include="Controllers\MyProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -5522,6 +5514,8 @@
     <Content Include="Views\Shared\_RightMenu.cshtml" />
     <Content Include="Views\Shared\_LayoutInvoice.cshtml" />
     <Content Include="Views\Invoice\Index.cshtml" />
+    <Content Include="Views\MyProfile\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutMyProfile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -5532,15 +5526,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="vendor\fullcalendar\locales\" />
-    <Folder Include="Views\Eight\" />
-    <Folder Include="Views\Eleven\" />
-    <Folder Include="Views\Five\" />
-    <Folder Include="Views\Four\" />
-    <Folder Include="Views\Nine\" />
-    <Folder Include="Views\Seven\" />
-    <Folder Include="Views\Six\" />
-    <Folder Include="Views\Ten\" />
-    <Folder Include="Views\Three\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="vendor\simple-line-icons\node_modules\less\test\test-es6.ts" />

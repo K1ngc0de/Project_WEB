@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace eUseControl.Web.Controllers
 {
-    public class FourController : Controller
+    public class MyProfileController : Controller
     {
-        // GET: Four
+        // GET: MyProfile
         public ActionResult Index()
         {
             return View();
