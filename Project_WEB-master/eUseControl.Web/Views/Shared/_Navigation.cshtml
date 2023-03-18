@@ -17,10 +17,7 @@
 
                     <ul class="nav nav-main">
                         <li>
-                            <a class="nav-link" href="layouts-default.html">
-                                <i class="bx bx-home-alt" aria-hidden="true"></i>
-                                <span>Dashboard</span>
-                            </a>
+                            @Html.ActionLink("Home", "Index", "Home")  
                         </li>
                         <li class="nav-parent">
                             <a class="nav-link" href="#">
@@ -274,51 +271,26 @@
                             </a>
                             <ul class="nav nav-children">
                                 <li>
-                                    <a class="nav-link" href="pages-signup.html">
-                                        Sign Up
-                                    </a>
+                                    @Html.ActionLink("Sign Up", "Index", "SignUp")
                                 </li>
                                 <li>
-                                    <a class="nav-link" href="pages-signin.html">
-                                        Sign In
-                                    </a>
+                                    @Html.ActionLink("Sign In", "Index", "SignIn")
                                 </li>
                                 <li>
-                                    <a class="nav-link" href="pages-recover-password.html">
-                                        Recover Password
-                                    </a>
+                                    @Html.ActionLink("My Profile", "Index", "MyProfile")
                                 </li>
                                 <li>
-                                    <a class="nav-link" href="pages-lock-screen.html">
-                                        Locked Screen
-                                    </a>
+                                    @Html.ActionLink("Invoice", "Index", "Invoice")
                                 </li>
                                 <li>
-                                    <a class="nav-link" href="pages-user-profile.html">
-                                        User Profile
-                                    </a>
+                                    @Html.ActionLink("Price", "Index", "Price")
                                 </li>
                                 <li>
-                                    <a class="nav-link" href="pages-session-timeout.html">
-                                        Session Timeout
-                                    </a>
+                                    @Html.ActionLink("Document", "Index", "Document")
                                 </li>
                                 <li>
-                                    <a class="nav-link" href="pages-calendar.html">
-                                        Calendar
-                                    </a>
-                                </li>
-                                <li>
-                                    @Html.ActionLink("MyProfile", "Index", "MyProfile")
-                                </li>
-                                <li>
-                                    <a class="nav-link" href="pages-media-gallery.html">
-                                        Media Gallery
-                                    </a>
-                                </li>
-                                <li>
-                                        @Html.ActionLink("Invoice", "Index", "Invoice")                                
-                                </li>
+                                    @Html.ActionLink("Comment", "Index", "Comment")
+                                </li>              
                                 <li>
                                     <a class="nav-link" href="pages-blank.html">
                                         Blank Page
