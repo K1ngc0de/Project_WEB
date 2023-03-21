@@ -5613,6 +5613,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InvoiceController.cs" />
     <Compile Include="Controllers\MyProfileController.cs" />
+    <Compile Include="Controllers\OfflinePayController.cs" />
     <Compile Include="Controllers\PriceController.cs" />
     <Compile Include="Controllers\SignInController.cs" />
     <Compile Include="Controllers\SignUpController.cs" />
@@ -5675,6 +5676,8 @@
     <Content Include="Views\Shared\_LayoutCampus1.cshtml" />
     <Content Include="Views\Campus1\Index.cshtml" />
     <Content Include="Views\DocZaselenie\Index.cshtml" />
+    <Content Include="Views\OfflinePay\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutOfflinePay.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
