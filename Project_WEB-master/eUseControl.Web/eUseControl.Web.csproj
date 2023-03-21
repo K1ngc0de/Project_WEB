@@ -300,6 +300,11 @@
     <Content Include="img\projects\project-7.jpg" />
     <Content Include="img\projects\project.jpg" />
     <Content Include="img\widget-twitter-profile.jpg" />
+    <None Include="Scripts\jquery-3.6.4.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.4.js" />
+    <Content Include="Scripts\jquery-3.6.4.min.js" />
+    <Content Include="Scripts\jquery-3.6.4.slim.js" />
+    <Content Include="Scripts\jquery-3.6.4.slim.min.js" />
     <Content Include="vendor\animate\animate.compat.css" />
     <Content Include="vendor\animate\animate.css" />
     <Content Include="vendor\animate\animate.min.css" />
@@ -5589,13 +5594,8 @@
     <Content Include="vendor\summernote\summernote-lite.min.js.map" />
     <Content Include="vendor\summernote\summernote.js.map" />
     <Content Include="vendor\summernote\summernote.min.js.map" />
-    <None Include="Scripts\jquery-3.6.3.intellisense.js" />
-    <Content Include="Scripts\jquery-3.6.3.js" />
-    <Content Include="Scripts\jquery-3.6.3.min.js" />
-    <Content Include="Scripts\jquery-3.6.3.slim.js" />
-    <Content Include="Scripts\jquery-3.6.3.slim.min.js" />
-    <Content Include="Scripts\jquery-3.6.3.slim.min.map" />
-    <Content Include="Scripts\jquery-3.6.3.min.map" />
+    <Content Include="Scripts\jquery-3.6.4.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.4.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.13.2.js" />
     <Content Include="Scripts\jquery-ui-1.13.2.min.js" />
