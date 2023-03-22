@@ -5610,7 +5610,6 @@
     <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\DocumentController.cs" />
     <Compile Include="Controllers\DocZaselenieController.cs" />
-    <Compile Include="Controllers\ExitController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InvoiceController.cs" />
     <Compile Include="Controllers\MyProfileController.cs" />
@@ -5679,7 +5678,6 @@
     <Content Include="Views\DocZaselenie\Index.cshtml" />
     <Content Include="Views\OfflinePay\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutOfflinePay.cshtml" />
-    <Content Include="Views\Exit\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

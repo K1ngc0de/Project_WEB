@@ -41,21 +41,6 @@
 <body>
     <section class="body">
         <div class="inner-wrapper">
-            <!-- Header -->
-            <nav class="navbar navbar-default navbar-fixed-top">
-                @Html.Partial("_Header")
-            </nav>
-
-            <!-- Navigation Left-->
-            <aside class="navigation" id="navigation">
-                @Html.Partial("_Navigation")
-            </aside>
-
-            <!-- Navigation Right-->
-            <aside class="navigation" id="navigation">
-                @Html.Partial("_RightMenu")
-            </aside>
-
             <!-- Main view -->
             <section class="content">
                 @RenderBody()
