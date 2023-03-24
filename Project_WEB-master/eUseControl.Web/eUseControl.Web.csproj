@@ -5609,7 +5609,6 @@
     <Compile Include="Controllers\Campus1Controller.cs" />
     <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\DocumentController.cs" />
-    <Compile Include="Controllers\DocZaselenieController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InvoiceController.cs" />
     <Compile Include="Controllers\MyProfileController.cs" />
