@@ -5605,6 +5605,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\Campus1Controller.cs" />
     <Compile Include="Controllers\CommentController.cs" />
