@@ -33,15 +33,15 @@
             <section class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-xl-8">
+                        <div class="col-xl-10">
                             <div class="chart-data-selector" id="salesSelectorWrapper">
                                 <h2>
-                                    Sales:
+                                    Топ-3 университетов Молдовы:
                                     <strong>
                                         <select class="form-control" id="salesSelector">
-                                            <option value="Porto Admin" selected>Porto Admin</option>
-                                            <option value="Porto Drupal">Porto Drupal</option>
-                                            <option value="Porto Wordpress">Porto Wordpress</option>
+                                            <option value="Porto Admin" selected>UTM</option>
+                                            <option value="Porto Drupal">USMF</option>
+                                            <option value="Porto Wordpress">USM</option>
                                         </select>
                                     </strong>
                                 </h2>
@@ -53,14 +53,11 @@
 
                                         var flotDashSales1Data = [{
                                             data: [
-                                                ["Jan", 140],
-                                                ["Feb", 240],
-                                                ["Mar", 190],
-                                                ["Apr", 140],
-                                                ["May", 180],
-                                                ["Jun", 320],
-                                                ["Jul", 270],
-                                                ["Aug", 180]
+                                                ["esp", 2],
+                                                ["ug", 2],
+                                                ["diez", 2],
+                                                ["nokta", 1],
+                                                ["newsmaker", 1]
                                             ],
                                             color: "#0088cc"
                                         }];
@@ -75,14 +72,11 @@
 
                                         var flotDashSales2Data = [{
                                             data: [
-                                                ["Jan", 240],
-                                                ["Feb", 240],
-                                                ["Mar", 290],
-                                                ["Apr", 540],
-                                                ["May", 480],
-                                                ["Jun", 220],
-                                                ["Jul", 170],
-                                                ["Aug", 190]
+                                                ["esp", 1],
+                                                ["ug", 1],
+                                                ["diez", 3],
+                                                ["nokta", 2],
+                                                ["newsmaker", 3]
                                             ],
                                             color: "#2baab1"
                                         }];
@@ -92,19 +86,16 @@
                                     </script>
 
                                     <!-- Flot: Sales Porto Wordpress -->
-                                    <div class="chart chart-sm" data-sales-rel="Porto Wordpress" id="flotDashSales3" class="chart-hidden"></div>
+                                    <div class="chart chart-sm" data-sales-rel="Porto WorSdpress" id="flotDashSales3" class="chart-hidden"></div>
                                     <script>
 
                                         var flotDashSales3Data = [{
                                             data: [
-                                                ["Jan", 840],
-                                                ["Feb", 740],
-                                                ["Mar", 690],
-                                                ["Apr", 940],
-                                                ["May", 1180],
-                                                ["Jun", 820],
-                                                ["Jul", 570],
-                                                ["Aug", 780]
+                                                ["esp", 3],
+                                                ["ug", 3],
+                                                ["diez", 1],
+                                                ["nokta", 3],
+                                                ["newsmaker", 2]
                                             ],
                                             color: "#734ba9"
                                         }];
@@ -114,18 +105,6 @@
                                     </script>
                                 </div>
 
-                            </div>
-                        </div>
-                        <div class="col-xl-4 text-center">
-                            <h2 class="card-title mt-3">Sales Goal</h2>
-                            <div class="liquid-meter-wrapper liquid-meter-sm mt-3">
-                                <div class="liquid-meter">
-                                    <meter min="0" max="100" value="35" id="meterSales"></meter>
-                                </div>
-                                <div class="liquid-meter-selector mt-4 pt-1" id="meterSalesSel">
-                                    <a href="#" data-val="35" class="active">Monthly Goal</a>
-                                    <a href="#" data-val="28">Annual Goal</a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -237,7 +216,7 @@
     </div>
 
     <div class="row pt-4">
-        <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="col-lg-0 mb-4 mb-lg-0">
             <section class="card">
                 <header class="card-header">
                     <div class="card-actions">
@@ -245,8 +224,8 @@
                         <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
                     </div>
 
-                    <h2 class="card-title">Best Seller</h2>
-                    <p class="card-subtitle">Customize the graphs as much as you want, there are so many options and features to display information using Porto Admin Template.</p>
+                    <h2 class="card-title">Пустой график</h2>
+                    <p class="card-subtitle"></p>
                 </header>
                 <div class="card-body">
 
@@ -256,49 +235,31 @@
 
                         var flotDashBasicData = [{
                             data: [
-                                [0, 170],
-                                [1, 169],
-                                [2, 173],
-                                [3, 188],
-                                [4, 147],
-                                [5, 113],
-                                [6, 128],
-                                [7, 169],
-                                [8, 173],
-                                [9, 128],
-                                [10, 128]
+                                [1, 80],
+                                [2, 169],
+                                [3, 173],
+                                [4, 188],
+                                [5, 147]
                             ],
                             label: "Series 1",
                             color: "#0088cc"
                         }, {
                             data: [
-                                [0, 115],
-                                [1, 124],
-                                [2, 114],
-                                [3, 121],
-                                [4, 115],
-                                [5, 83],
-                                [6, 102],
-                                [7, 148],
-                                [8, 147],
-                                [9, 103],
-                                [10, 113]
+                                [1, 115],
+                                [2, 124],
+                                [3, 114],
+                                [4, 121],
+                                [5, 115]
                             ],
                             label: "Series 2",
                             color: "#2baab1"
                         }, {
                             data: [
-                                [0, 70],
-                                [1, 69],
-                                [2, 73],
-                                [3, 88],
-                                [4, 47],
-                                [5, 13],
-                                [6, 28],
-                                [7, 69],
-                                [8, 73],
-                                [9, 28],
-                                [10, 28]
+                                [1, 70],
+                                [2, 69],
+                                [3, 73],
+                                [4, 88],
+                                [5, 47]
                             ],
                             label: "Series 3",
                             color: "#734ba9"
@@ -311,24 +272,7 @@
                 </div>
             </section>
         </div>
-        <div class="col-lg-6">
-            <section class="card">
-                <header class="card-header">
-                    <div class="card-actions">
-                        <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
-                        <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
-                    </div>
-                    <h2 class="card-title">Server Usage</h2>
-                    <p class="card-subtitle">It's easy to create custom graphs on Porto Admin Template, there are several graph types that you can use.</p>
-                </header>
-                <div class="card-body">
 
-                    <!-- Flot: Curves -->
-                    <div class="chart chart-md" id="flotDashRealTime"></div>
-
-                </div>
-            </section>
-        </div>
     </div>
 
     <div class="row pt-4 mt-2">
@@ -391,7 +335,7 @@
                                 <div class="card-header border-bottom-0">
                                     <h4 class="card-title">
                                         <a class="accordion-toggle" data-bs-toggle="collapse" data-bs-parent="#accordion" data-bs-target="#collapse1Two">
-                                            <i class="fas fa-comment me-1"></i> Messages
+                                            <i class="fas fa-comment me-1"></i> Сообщения
                                         </a>
                                     </h4>
                                 </div>
@@ -444,7 +388,7 @@
                         <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
                     </div>
 
-                    <h2 class="card-title">My Stats</h2>
+                    <h2 class="card-title">Моя статистика</h2>
                 </header>
                 <div class="card-body">
                     <section class="card">
@@ -454,29 +398,13 @@
                                 var sparklineBarDashData = [5, 6, 7, 2, 0, 4, 2, 4, 2, 0, 4, 2, 4, 2, 0, 4];
                             </script>
                             <div class="h4 font-weight-bold mb-0">488</div>
-                            <p class="text-3 text-muted mb-0">Average Profile Visits</p>
+                            <p class="text-3 text-muted mb-0">Посещений профиля</p>
                         </div>
                     </section>
                     <section class="card">
                         <div class="card-body">
-                            <div class="circular-bar circular-bar-xs m-0 mt-1 me-4 mb-0 float-end">
-                                <div class="circular-bar-chart" data-percent="45" data-plugin-options='{ "barColor": "#2baab1", "delay": 300, "size": 50, "lineWidth": 4 }'>
-                                    <strong>Average</strong>
-                                    <label><span class="percent">45</span>%</label>
-                                </div>
-                            </div>
                             <div class="h4 font-weight-bold mb-0">12</div>
-                            <p class="text-3 text-muted mb-0">Working Projects</p>
-                        </div>
-                    </section>
-                    <section class="card">
-                        <div class="card-body">
-                            <div class="small-chart float-end" id="sparklineLineDash"></div>
-                            <script type="text/javascript">
-                                var sparklineLineDashData = [15, 16, 17, 19, 10, 15, 13, 12, 12, 14, 16, 17];
-                            </script>
-                            <div class="h4 font-weight-bold mb-0">89</div>
-                            <p class="text-3 text-muted mb-0">Pending Tasks</p>
+                            <p class="text-3 text-muted mb-0">Написано отзывов</p>
                         </div>
                     </section>
                 </div>
@@ -490,7 +418,7 @@
 
                     <h2 class="card-title">
                         <span class="badge badge-primary font-weight-normal va-middle p-2 me-e">298</span>
-                        <span class="va-middle">Friends</span>
+                        <span class="va-middle">Список друзей</span>
                     </h2>
                 </header>
                 <div class="card-body">
@@ -520,13 +448,13 @@
                         </ul>
                         <hr class="dotted short">
                         <div class="text-end">
-                            <a class="text-uppercase text-muted" href="#">(View All)</a>
+                            <a class="text-uppercase text-muted" href="#">Открыть</a>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer">
                     <div class="input-group">
-                        <input type="text" class="form-control" name="s" id="s" placeholder="Search...">
+                        <input type="text" class="form-control" name="s" id="s" placeholder="Поиск">
                         <button class="btn btn-default" type="submit"><i class="bx bx-search"></i></button>
                     </div>
                 </div>
@@ -540,37 +468,31 @@
                         <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
                     </div>
 
-                    <h2 class="card-title">Company Activity</h2>
+                    <h2 class="card-title">Последние новости</h2>
                 </header>
                 <div class="card-body">
                     <div class="timeline timeline-simple mt-3 mb-3">
                         <div class="tm-body">
                             <div class="tm-title">
-                                <h5 class="m-0 pt-2 pb-2 text-dark font-weight-semibold text-uppercase">November 2021</h5>
+                                <h5 class="m-0 pt-2 pb-2 text-dark font-weight-semibold text-uppercase">апрель 2023</h5>
                             </div>
                             <ol class="tm-items">
                                 <li>
                                     <div class="tm-box">
-                                        <p class="text-muted mb-0">7 months ago.</p>
+                                        <p class="text-muted mb-0">22 декабря 2022 года</p>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit augue at leo viverra, aliquam egestas lectus laoreet. Donec vehicula vestibulum ipsum, tincidunt ultrices elit suscipit ac. Sed eget risus laoreet, varius nibh id, luctus ligula. Nulla facilisi. <span class="text-primary">#awesome</span>
+                                            HIGHER EDUCATION REVIEW ВКЛЮЧИЛ UTM В ТОП-10 САМЫХ ПЕРСПЕКТИВНЫХ УНИВЕРСИТЕТОВ И КОЛЛЕДЖЕЙ СНГ, 2022 г.
+                                            «За его исключительный академический опыт, способность адаптироваться к эволюции образовательной сферы и трансформационное влияние на карьеру студентов», — редакционная коллегия Higher Education Review <span class="text-primary"></span>
                                         </p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="tm-box">
-                                        <p class="text-muted mb-0">7 months ago.</p>
+                                        <p class="text-muted mb-0">22 декабря 2022 года</p>
                                         <p>
-                                            Checkout! How cool is that! Etiam efficitur, sapien eget vehicula gravida, magna neque volutpat risus, vitae tempus odio arcu ac elit. Aenean porta orci eu mi fermentum varius. Curabitur ac sem at nibh egestas. Curabitur ac sem at nibh egestas.
+                                            МЕЖДУНАРОДНЫЙ СТУДЕНЧЕСКИЙ КОНКУРС «BLACKSEA SCIENCE 2023»
+                                            The students of Technical University of Moldova (UTM) are invited to participate in the International Competition of Student Scientific Works “Black Sea Science 2023”
                                         </p>
-                                        <div class="thumbnail-gallery">
-                                            <a class="img-thumbnail lightbox" href="img/projects/project-4.jpg" data-plugin-options='{ "type":"image" }'>
-                                                <img class="img-fluid" width="215" src="img/projects/project-4.jpg">
-                                                <span class="zoom">
-                                                    <i class="bx bx-search"></i>
-                                                </span>
-                                            </a>
-                                        </div>
                                     </div>
                                 </li>
                             </ol>
@@ -599,10 +521,6 @@
         <div class="col-xl-6">
             <section class="card">
                 <header class="card-header card-header-transparent">
-                    <div class="card-actions">
-                        <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
-                        <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
-                    </div>
 
                     <h2 class="card-title">Краткие сведения о наших общежитиях</h2>
                 </header>
