@@ -228,7 +228,8 @@
     <Content Include="img\logo-light.png" />
     <Content Include="img\logo-modern.png" />
     <Content Include="img\logo.png" />
-    <Content Include="img\logo1.png" />
+    <Content Include="img\logo3.png" />
+    <Content Include="img\logo2.png" />
     <Content Include="img\patterns\az_subtle.png" />
     <Content Include="img\patterns\blizzard.png" />
     <Content Include="img\patterns\bright_squares.png" />
