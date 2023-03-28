@@ -11,7 +11,7 @@ namespace eUseControl.Web.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            UserData u = new UserData();
+            //UserData u = new UserData();
 
             return View();
         }
