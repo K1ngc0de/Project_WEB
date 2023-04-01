@@ -88,6 +88,10 @@
       <Project>{3CCFE9C5-307C-49CA-A8B7-750075D14A41}</Project>
       <Name>eUseControl.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\eUseControl.Helpers\eUseControl.Helpers.csproj">
+      <Project>{F2F7A971-E485-432A-B14A-17A9F41E1D39}</Project>
+      <Name>eUseControl.Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\eUseControl.BusinessLogic.dll" />

@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
 using eUseControl.BusinessLogic;
-using eUseControl.BusinessLogic.Interface;
 using eUseControl.BusinessLogic.Interfaces;
 using eUseControl.Domain.Entities.User;
 using eUseControl.Web.Models;
