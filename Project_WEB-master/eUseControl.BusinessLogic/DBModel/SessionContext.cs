@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using eUseControl.Domain.Entities.User;
 
-namespace eUseControl.BusinessLogic.DBModel
+namespace eUseControl.BussinesLogic.DBModel
 {
     public class SessionContext : DbContext
     {
-        public SessionContext() : base("name=CCToolShop")
+        public SessionContext() : base("name=eUseControl")
         {
         }
 

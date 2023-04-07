@@ -1,36 +1,31 @@
-﻿using eUseControl.BusinessLogic.Core;
-using eUseControl.BusinessLogic.Interfaces;
-using eUseControl.Domain.Entities.User;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
+﻿using eUseControl.BussinesLogic.Interfaces;
 using System.Web;
+using eUseControl.Domain.Entities.User;
+using eUseControl.BussinesLogic.Core;
 
-namespace eUseControl.BusinessLogic
+namespace eUseControl.BussinesLogic
 {
     public class SessionBL : UserApi, ISession
     {
-        public ULoginResp UserLogin(ULoginData data)
-        {
-            return UserLoginAction(data);
-        }
-
         public HttpCookie GenCookie(string loginCredential)
         {
             return Cookie(loginCredential);
         }
 
+        public ULoginResp UserLogin(ULoginData data)
+        {
+            return UserLoginAction(data);
+        }
+
+
+        public ULoginResp UserSignUp(USignUpData data)
+        {
+            return UserRegisterAction(data);
+        }
+
         public UserMinimal GetUserByCookie(string apiCookieValue)
         {
             return UserCookie(apiCookieValue);
-        }
-
-        public HttpCookie GenCookie(object credential)
-        {
-            throw new NotImplementedException();
         }
     }
 }

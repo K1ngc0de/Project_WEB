@@ -5,6 +5,8 @@ using eUseControl.Domain.Enums;
 
 namespace eUseControl.Domain.Entities.User
 {
+   
+
     public class UDbTable
     {
         [Key]

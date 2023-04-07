@@ -1,29 +1,57 @@
-﻿using eUseControl.BusinessLogic.DBModel;
-using eUseControl.Domain.Entities.User;
-using eUseControl.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
+//using AutoMapper;
+//using RestSharp;
+using eUseControl.BusinessLogic.DBModel;
 
-namespace eUseControl.BusinessLogic.Core
+using eUseControl.Domain.Entities.Images;
+using eUseControl.Domain.Entities.User;
+using eUseControl.Helpers;
+
+namespace eUseControl.BussinesLogic.Core
 {
+
     public class UserApi
     {
+        internal ULoginResp UserRegisterAction(USignUpData data)
+        {
+            UDbTable user = new UDbTable
+            {
+                Username = data.Credential,
+                Id = 1,
+                Email = data.Email,
+                Password = data.Password,
+                LasIp = data.LoginIp,
+                LastLogin = data.LoginDataTime,
+                Level = Domain.Enums.URole.User
+
+            };
+            using (var db = new UserContext())
+            {
+                //user = db.Users.FirstOrDefault(u => u.Username == data.Credential);
+                db.Users.Add(user);
+                db.SaveChanges();
+            }
+            return new ULoginResp { Status = true };
+        }
+
+
         internal ULoginResp UserLoginAction(ULoginData data)
         {
             UDbTable result;
             var validate = new EmailAddressAttribute();
-            if (validate.IsValid(data.Credential))
+            if (validate.IsValid(data.Credetial))
             {
-                var pass = LoginHelper.HashGen(data.Password);
+                /*var pass = LoginHelper.HashGen(data.Password);*/
+                var pass = data.Password;
                 using (var db = new UserContext())
                 {
-                    result = db.Users.FirstOrDefault(u => u.Email == data.Credential && u.Password == pass);
+                    result = db.Users.FirstOrDefault(u => u.Email == data.Credetial && u.Password == pass);
+                    Console.WriteLine(result);
                 }
 
                 if (result == null)
@@ -34,7 +62,7 @@ namespace eUseControl.BusinessLogic.Core
                 using (var todo = new UserContext())
                 {
                     result.LasIp = data.LoginIp;
-                    result.LastLogin = data.LoginDateTime;
+                    result.LastLogin = data.LoginDataTime;
                     todo.Entry(result).State = EntityState.Modified;
                     todo.SaveChanges();
                 }
@@ -43,10 +71,11 @@ namespace eUseControl.BusinessLogic.Core
             }
             else
             {
-                var pass = LoginHelper.HashGen(data.Password);
+                /*var pass = LoginHelper.HashGen(data.Password);*/
+                var pass = data.Password;
                 using (var db = new UserContext())
                 {
-                    result = db.Users.FirstOrDefault(u => u.Username == data.Credential && u.Password == pass);
+                    result = db.Users.FirstOrDefault(u => u.Username == data.Credetial && u.Password == pass);
                 }
 
                 if (result == null)
@@ -57,7 +86,7 @@ namespace eUseControl.BusinessLogic.Core
                 using (var todo = new UserContext())
                 {
                     result.LasIp = data.LoginIp;
-                    result.LastLogin = data.LoginDateTime;
+                    result.LastLogin = data.LoginDataTime;
                     todo.Entry(result).State = EntityState.Modified;
                     todo.SaveChanges();
                 }
@@ -114,7 +143,7 @@ namespace eUseControl.BusinessLogic.Core
         internal UserMinimal UserCookie(string cookie)
         {
             Session session;
-            UDbTable curentUser;
+            UDbTable currentUser;
 
             using (var db = new SessionContext())
             {
@@ -127,19 +156,59 @@ namespace eUseControl.BusinessLogic.Core
                 var validate = new EmailAddressAttribute();
                 if (validate.IsValid(session.Username))
                 {
-                    curentUser = db.Users.FirstOrDefault(u => u.Email == session.Username);
+                    currentUser = db.Users.FirstOrDefault(u => u.Email == session.Username);
                 }
                 else
                 {
-                    curentUser = db.Users.FirstOrDefault(u => u.Username == session.Username);
+                    currentUser = db.Users.FirstOrDefault(u => u.Username == session.Username);
                 }
+
+                if (currentUser == null) return null;
+                UserMinimal userminimal = new UserMinimal()
+                {
+                    Username = currentUser.Username,
+                    LasIp = currentUser.LasIp,
+                    Id = currentUser.Id,
+                    Email = currentUser.Email,
+                    Level = currentUser.Level,
+                    LastLogin = currentUser.LastLogin
+                };
+
+                return userminimal;
+            }
+        }
+
+        //internal List<Image> GetGalerieDataApi()
+        //{
+        //    List<IDbTable> img_list;
+        //    var local = new List<Image>();
+        //    using (ImageContext db = new ImageContext())
+        //    {
+        //        img_list = db.Images.ToList();
+        //    }
+        //
+        //    foreach (var img in img_list)
+        //    {
+        //        Mapper.Initialize(cfg => cfg.CreateMap<IDbTable, Image>());
+        //        var img_min = Mapper.Map<Image>(img);
+        //        local.Add(img_min);
+        //    }
+        //
+        //    return local;
+        //}
+
+        internal void DeleteImageAction(int Imageid)
+        {
+            IDbTable image;
+
+            using (var db = new ImageContext())    //delete product data from Product table in database
+            {
+                image = db.Images.FirstOrDefault(m => m.ImageID == Imageid);
+                //System.IO.File.Delete(Path.Combine(HostingEnvironment.MapPath("~/") + product.PreImgPath));
+                db.Images.Remove(image);
+                db.SaveChanges();
             }
 
-            if (curentUser == null) return null;
-            Mapper.Initialize(cfg => cfg.CreateMap<UDbTable, UserMinimal>());
-            var userminimal = Mapper.Map<UserMinimal>(curentUser);
-
-            return userminimal;
         }
     }
 }
