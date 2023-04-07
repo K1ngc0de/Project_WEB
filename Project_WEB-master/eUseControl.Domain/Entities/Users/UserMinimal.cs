@@ -1,14 +1,14 @@
-﻿using System;
+﻿using eUseControl.Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using eUseControl.Domain.Enums;
 
-namespace eUseControl.Domain.Entities.User
+namespace eUseControl.Domain.Entities.Users
 {
     public class UserMinimal
-    
+
     {
         public int Id { get; set; }
         public string Username { get; set; }

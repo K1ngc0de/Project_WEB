@@ -1,7 +1,11 @@
-﻿using System.Data.Entity;
-using eUseControl.Domain.Entities.User;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace eUseControl.BussinesLogic.DBModel
+namespace eUseControl.BusinessLogic.DBModel
 {
     class UserContext : DbContext
     {

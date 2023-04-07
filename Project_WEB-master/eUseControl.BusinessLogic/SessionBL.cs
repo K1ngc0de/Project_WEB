@@ -1,9 +1,13 @@
-﻿using eUseControl.BussinesLogic.Interfaces;
-using System.Web;
-using eUseControl.Domain.Entities.User;
-using eUseControl.BussinesLogic.Core;
+﻿using eUseControl.BusinessLogic.Core;
+using eUseControl.BusinessLogic.Interfaces;
+//using eUseControl.Domain.Etities.Users;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace eUseControl.BussinesLogic
+namespace eUseControl.BusinessLogic
 {
     public class SessionBL : UserApi, ISession
     {
@@ -18,7 +22,7 @@ namespace eUseControl.BussinesLogic
         }
 
 
-        public ULoginResp UserSignUp(USignUpData data)
+        public ULoginResp UserRegister(URegisterData data)
         {
             return UserRegisterAction(data);
         }

@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eUseControl.Domain.Entities.User
+namespace eUseControl.Domain.Entities.Users
 {
-    
-
     public class ULoginData
     {
         public string Credetial { get; set; }

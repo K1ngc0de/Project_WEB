@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{38152D1D-AA8C-4055-BB79-7363CF6445E8}</ProjectGuid>
+    <ProjectGuid>{AA6DF9B5-87CE-4EA7-A549-74C79659CAF4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>eUseControl.BusinessLogic</RootNamespace>
@@ -40,22 +40,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Http, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http.WebHost, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,50 +57,18 @@
     <Compile Include="DBModel\ImageContext.cs" />
     <Compile Include="DBModel\SessionContext.cs" />
     <Compile Include="DBModel\UserContext.cs" />
+    <Compile Include="Interfaces\IGalerie.cs" />
     <Compile Include="Interfaces\ISession.cs" />
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="LoginBL\GalerieBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionBL.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="bin\Debug\eUseControl.BusinessLogic.dll.config" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Debug\eUseControl.BusinessLogic.csproj.AssemblyReference.cache" />
-    <None Include="obj\Debug\eUseControl.BusinessLogic.csproj.CopyComplete" />
-    <None Include="obj\Debug\eUseControl.BusinessLogic.csproj.CoreCompileInputs.cache" />
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\eUseControl.Domain\eUseControl.Domain.csproj">
-      <Project>{3CCFE9C5-307C-49CA-A8B7-750075D14A41}</Project>
-      <Name>eUseControl.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\eUseControl.Helpers\eUseControl.Helpers.csproj">
-      <Project>{F2F7A971-E485-432A-B14A-17A9F41E1D39}</Project>
-      <Name>eUseControl.Helpers</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\eUseControl.BusinessLogic.dll" />
-    <Content Include="bin\Debug\eUseControl.BusinessLogic.pdb" />
-    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
-    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
-    <Content Include="bin\Debug\System.Net.Http.Formatting.dll" />
-    <Content Include="bin\Debug\System.Net.Http.Formatting.xml" />
-    <Content Include="bin\Debug\System.Web.Http.dll" />
-    <Content Include="bin\Debug\System.Web.Http.WebHost.dll" />
-    <Content Include="bin\Debug\System.Web.Http.WebHost.xml" />
-    <Content Include="bin\Debug\System.Web.Http.xml" />
-    <Content Include="obj\Debug\eUseControl.BusinessLogic.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\eUseControl.BusinessLogic.dll" />
-    <Content Include="obj\Debug\eUseControl.BusinessLogic.pdb" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Release\" />
     <Folder Include="DBModel\Seed\" />
-    <Folder Include="LoginBL\" />
-    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

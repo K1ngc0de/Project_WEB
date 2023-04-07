@@ -3,21 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
-//using AutoMapper;
-//using RestSharp;
-using eUseControl.BusinessLogic.DBModel;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Collections.Specialized.BitVector32;
+using static System.Net.Mime.MediaTypeNames;
 
-using eUseControl.Domain.Entities.Images;
-using eUseControl.Domain.Entities.User;
-using eUseControl.Helpers;
-
-namespace eUseControl.BussinesLogic.Core
+namespace eUseControl.BusinessLogic.Core
 {
-
     public class UserApi
     {
-        internal ULoginResp UserRegisterAction(USignUpData data)
+        internal ULoginResp UserRegisterAction(URegisterData data)
         {
             UDbTable user = new UDbTable
             {
@@ -178,24 +173,24 @@ namespace eUseControl.BussinesLogic.Core
             }
         }
 
-        //internal List<Image> GetGalerieDataApi()
-        //{
-        //    List<IDbTable> img_list;
-        //    var local = new List<Image>();
-        //    using (ImageContext db = new ImageContext())
-        //    {
-        //        img_list = db.Images.ToList();
-        //    }
-        //
-        //    foreach (var img in img_list)
-        //    {
-        //        Mapper.Initialize(cfg => cfg.CreateMap<IDbTable, Image>());
-        //        var img_min = Mapper.Map<Image>(img);
-        //        local.Add(img_min);
-        //    }
-        //
-        //    return local;
-        //}
+        internal List<Image> GetGalerieDataApi()
+        {
+            List<IDbTable> img_list;
+            var local = new List<Image>();
+            using (ImageContext db = new ImageContext())
+            {
+                img_list = db.Images.ToList();
+            }
+
+            foreach (var img in img_list)
+            {
+                Mapper.Initialize(cfg => cfg.CreateMap<IDbTable, Image>());
+                var img_min = Mapper.Map<Image>(img);
+                local.Add(img_min);
+            }
+
+            return local;
+        }
 
         internal void DeleteImageAction(int Imageid)
         {

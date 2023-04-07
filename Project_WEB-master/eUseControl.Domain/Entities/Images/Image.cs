@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eUseControl.Domain.Entities.Images
 {
-    public class Image
+    internal class Image
     {
         public int ImageID { get; set; }
 

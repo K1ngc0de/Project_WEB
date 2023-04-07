@@ -1,5 +1,5 @@
 ﻿using eUseControl.BusinessLogic.Interfaces;
-using eUseControl.BusinessLogic;
+using eUseControl.BusinessLogic.LoginBL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +8,15 @@ using System.Threading.Tasks;
 
 namespace eUseControl.BusinessLogic
 {
-    internal class BusinessLogic
+    public class BusinessLogic
     {
         public ISession GetSessionBL()
         {
             return new SessionBL();
+        }
+        public IGalerie GetGalerieBL()
+        {
+            return new GalerieBL();
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eUseControl.BussinesLogic.Core
+namespace eUseControl.BusinessLogic.Core
 {
     class AdminApi
     {

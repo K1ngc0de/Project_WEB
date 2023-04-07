@@ -1,12 +1,15 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using eUseControl.Domain.Enums;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using eUseControl.Domain.Enums;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
 
-namespace eUseControl.Domain.Entities.User
+namespace eUseControl.Domain.Entities.Users
 {
-   
-
     public class UDbTable
     {
         [Key]
