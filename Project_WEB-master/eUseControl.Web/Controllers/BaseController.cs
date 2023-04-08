@@ -1,10 +1,8 @@
 ﻿using eUseControl.BusinessLogic.Interfaces;
-using eUseControl.BusinessLogic;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using eUseControl.Web.Extension;
 
 namespace eUseControl.Web.Controllers
 {

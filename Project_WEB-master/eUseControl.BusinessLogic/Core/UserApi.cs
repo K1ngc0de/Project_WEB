@@ -7,11 +7,12 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
+using AutoMapper;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using static System.Collections.Specialized.BitVector32;
-using static System.Net.Mime.MediaTypeNames;
+
 
 namespace eUseControl.BusinessLogic.Core
 {

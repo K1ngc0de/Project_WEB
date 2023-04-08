@@ -1,13 +1,15 @@
-﻿using eUseControl.Web.Models;
+﻿using eUseControl.Web.Extension;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using eUseControl.Web.Controllers;
+using eUseControl.Web.Models;
 
 namespace eUseControl.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         // GET: Home
         public ActionResult Index()

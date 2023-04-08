@@ -723,14 +723,14 @@ require.register("store/src/store.old.js", function(exports, require, module){
     if (store.isFake()) {
         var area;
 
-        if (document.documentElement.addBehavior) {// IE userData
+        if (document.documentElement.addBehavior) {// IE DataRequest
             var el = document.createElement('div'),
                 sn = 'localStorage',
                 body = document.body,
                 wrap = function wrap(fn) {
                     return function() {
                         body.appendChild(el);
-                        el.addBehavior('#default#userData');
+                        el.addBehavior('#default#DataRequest');
                         el.load(sn);
                         var ret = fn.apply(store._area, arguments);
                         el.save(sn);
@@ -741,9 +741,9 @@ require.register("store/src/store.old.js", function(exports, require, module){
                 has = function has(key){
                     return el.getAttribute(key) !== null;
                 },
-                UserDataStorage = function UserDataStorage(){};
+                DataRequestStorage = function DataRequestStorage(){};
 
-            UserDataStorage.prototype = {
+            DataRequestStorage.prototype = {
                 length: (wrap(function(){
                     return el.XMLDocument.documentElement.attributes.length;
                 }))(),
@@ -772,7 +772,7 @@ require.register("store/src/store.old.js", function(exports, require, module){
                     this.length = 0;
                 })
             };
-            area = new UserDataStorage();
+            area = new DataRequestStorage();
 
         } else if ('globalStorage' in window && window.globalStorage) {// FF globalStorage
             area = create('global', window.globalStorage[window.location.hostname]);
