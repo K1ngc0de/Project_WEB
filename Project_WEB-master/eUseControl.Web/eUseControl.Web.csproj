@@ -5609,17 +5609,25 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Attributes\AdminMode.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\Campus1Controller.cs" />
     <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\DocumentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InvoiceController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MyProfileController.cs" />
     <Compile Include="Controllers\OfflinePayController.cs" />
     <Compile Include="Controllers\PriceController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataRequest.cs" />
+    <Compile Include="Models\UserData.cs" />
+    <Compile Include="Models\UserLogin.cs" />
+    <Compile Include="Models\UserRegister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -5677,6 +5685,8 @@
     <Content Include="Views\OfflinePay\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutOfflinePay.cshtml" />
     <Content Include="Views\Shared\_PreHeader.cshtml" />
+    <Content Include="Views\Register\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -5686,7 +5696,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="vendor\fullcalendar\locales\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
@@ -5696,6 +5705,16 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eUseControl.BusinessLogic\eUseControl.BusinessLogic.csproj">
+      <Project>{AA6DF9B5-87CE-4EA7-A549-74C79659CAF4}</Project>
+      <Name>eUseControl.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eUseControl.Domain\eUseControl.Domain.csproj">
+      <Project>{8796f578-6f4e-4853-ae48-7325d0f4c7d8}</Project>
+      <Name>eUseControl.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

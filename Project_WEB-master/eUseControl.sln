@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eUseControl.Web", "eUseControl.Web\eUseControl.Web.csproj", "{FF151404-BA6B-4490-8C47-B229AB6248AE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0D610637-F3DF-48E6-B59F-2B7A7501656D} = {0D610637-F3DF-48E6-B59F-2B7A7501656D}
+		{8796F578-6F4E-4853-AE48-7325D0F4C7D8} = {8796F578-6F4E-4853-AE48-7325D0F4C7D8}
+		{AA6DF9B5-87CE-4EA7-A549-74C79659CAF4} = {AA6DF9B5-87CE-4EA7-A549-74C79659CAF4}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eUseControl.BusinessLogic", "eUseControl.BusinessLogic\eUseControl.BusinessLogic.csproj", "{AA6DF9B5-87CE-4EA7-A549-74C79659CAF4}"
 EndProject

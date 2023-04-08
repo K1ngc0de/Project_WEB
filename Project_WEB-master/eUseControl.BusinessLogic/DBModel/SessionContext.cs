@@ -1,4 +1,5 @@
-﻿using System;
+﻿using eUseControl.Domain.Entities.Users;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -15,3 +16,4 @@ namespace eUseControl.BusinessLogic.DBModel
         }
         public virtual DbSet<Session> Sessions { get; set; }
     }
+}

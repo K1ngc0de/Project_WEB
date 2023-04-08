@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,6 +70,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DBModel\Seed\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eUseControl.Domain\eUseControl.Domain.csproj">
+      <Project>{8796f578-6f4e-4853-ae48-7325d0f4c7d8}</Project>
+      <Name>eUseControl.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eUseControl.Helpers\eUseControl.Helpers.csproj">
+      <Project>{0d610637-f3df-48e6-b59f-2b7a7501656d}</Project>
+      <Name>eUseControl.Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
