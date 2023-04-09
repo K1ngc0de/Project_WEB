@@ -15,8 +15,8 @@
         </a>
 
         <div class="panel card-sign">
-            <div class="card-title-sign mt-3 text-end">
-                <h2 class="title text-uppercase font-weight-bold m-0"><i class="bx bx-user-circle me-1 text-6 position-relative top-5"></i> Sign Up</h2>
+            <div class="card-body">
+                <h2 class="title text-uppercase font-weight-bold m-0"><i class="bx bx-user-circle me-1 text-6 position-relative top-5"></i> Registration</h2>
 
                 @Html.ValidationSummary(true)
                 @using (Html.BeginForm("Index", "Register", FormMethod.Post, new { @id = "RegisterForm" }))
@@ -26,14 +26,14 @@
 
 
                     <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
-                        <div class=form-group mb-3">
+                        <div class="form-group mb-3">
                             <label class="mb-2 text-muted" for="name">Name</label>
 
 
                             @Html.LabelFor(m => m.Credential, new { @class = "control-label" })
                             @Html.TextBoxFor(m => m.Credential, new
                        {
-                           placeholder = "Unaalta",
+                           placeholder = "Vasilii Utkin",
                            title = "Please enter you username",
                            value = "",
                            name = "username",
@@ -47,7 +47,7 @@
                                 @Html.TextBoxFor(m => m.Email, new
                            {
                                placeholder = "example@gmail.com",
-                               title = "Please enter you email",
+                               title = "Please enter your email",
                                value = "",
                                name = "email",
                                id = "email",
@@ -56,14 +56,14 @@
                             </div>
 
 
-                            <div class="col-sm-6 mb-3">
+                            <div class="form-group mb-3">
                                 @Html.LabelFor(m => m.Password, new { @class = "control-label" })
                                 @Html.TextBoxFor(m => m.Password, new
                            {
                                @class = "form-control",
                                type = "password",
                                title = "Please enter your password",
-                               placeholder = "******",
+                               placeholder = "********",
                                value = "",
                                name = "password",
                                id = "password"
