@@ -15,7 +15,6 @@ namespace eUseControl.Domain.Entities.Users
         public string Password { get; set; }
         public string LoginIp { get; set; }
         public DateTime LoginDataTime { get; set; }
-
         public URole Level { get; set; }
     }
 }
