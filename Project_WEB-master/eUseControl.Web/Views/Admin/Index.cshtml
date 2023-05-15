@@ -1,0 +1,244 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPrice.cshtml";
+    ViewBag.Title = "Price";
+}
+
+@using System.Web.Optimization
+@model IEnumerable<eUseControl.Web.Models.DataRequest>
+<section role="main" class="content-body">
+    <header class="page-header">
+        <h2>Стоимость общежитиий</h2>
+
+        <div class="right-wrapper text-end">
+            <ol class="breadcrumbs">
+                <li>
+                    <a href="index.html">
+                        <i class="bx bx-home-alt"></i>
+                    </a>
+                </li>
+
+                <li><span>Стоимость</span></li>
+
+                <li><span>Стоимость общежитий</span></li>
+
+            </ol>
+            <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fas fa-chevron-left"></i></a>
+        </div>
+    </header>
+
+
+    <!-- start: page -->
+    <section class="card">
+        <header class="card-header">
+            <div class="card-actions">
+                <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+                <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
+            </div>
+
+            <h2 class="card-title">Таблица</h2>
+        </header>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    
+                </div>
+            </div>
+            <table class="table table-bordered table-striped mb-0" id="datatable-editable">
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Email</th>
+                        <th>Роль</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+
+
+                @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                </tr>
+            }
+
+
+
+
+                <tbody>
+                    <tr data-item-id="1">
+                        <td>Общежитие №1</td>
+                        <td>
+                            улица Студентов 1
+                        </td>
+                        <td>5890-6100 лей/г</td>
+                        <td class="actions">
+                            <a href="#" class="hidden on-editing save-row"><i class="fas fa-save"></i></a>
+                            <a href="#" class="hidden on-editing cancel-row"><i class="fas fa-times"></i></a>
+                            <a href="#" class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="#" class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr data-item-id="2">
+                        <td>Общежитие №2</td>
+                        <td>
+                            улица Студентов 7/1
+                        </td>
+                        <td>5680-6000 лей/г</td>
+                        <td class="actions">
+                            <a href="#" class="hidden on-editing save-row"><i class="fas fa-save"></i></a>
+                            <a href="#" class="hidden on-editing cancel-row"><i class="fas fa-times"></i></a>
+                            <a href="#" class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="#" class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr data-item-id="3">
+                        <td>Общежитие №3</td>
+                        <td>
+                            улица Флорилор 4/2
+                        </td>
+                        <td>4890-5000 лей/г</td>
+                        <td class="actions">
+                            <a href="#" class="hidden on-editing save-row"><i class="fas fa-save"></i></a>
+                            <a href="#" class="hidden on-editing cancel-row"><i class="fas fa-times"></i></a>
+                            <a href="#" class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="#" class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr data-item-id="4">
+                        <td>Общежитие №4</td>
+                        <td>
+                            улица Флорилор 4/2
+                        </td>
+                        <td>4200-4600 лей/г</td>
+                        <td class="actions">
+                            <a href="#" class="hidden on-editing save-row"><i class="fas fa-save"></i></a>
+                            <a href="#" class="hidden on-editing cancel-row"><i class="fas fa-times"></i></a>
+                            <a href="#" class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="#" class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr data-item-id="5">
+                        <td>Общежитие №5</td>
+                        <td>
+                            улица Студентов 1
+                        </td>
+                        <td>4200-4590 лей/г</td>
+                        <td class="actions">
+                            <a href="#" class="hidden on-editing save-row"><i class="fas fa-save"></i></a>
+                            <a href="#" class="hidden on-editing cancel-row"><i class="fas fa-times"></i></a>
+                            <a href="#" class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="#" class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr data-item-id="6">
+                        <td>Общежитие №6</td>
+                        <td>
+                            улица Флорилор 4/1
+                        </td>
+                        <td>5700-6100 лей/г</td>
+                        <td class="actions">
+                            <a href="#" class="hidden on-editing save-row"><i class="fas fa-save"></i></a>
+                            <a href="#" class="hidden on-editing cancel-row"><i class="fas fa-times"></i></a>
+                            <a href="#" class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="#" class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr data-item-id="7">
+                        <td>Общежитие №7</td>
+                        <td>
+                            улица Студентов 7/4
+                        </td>
+                        <td>5500-5700 лей/г</td>
+                        <td class="actions">
+                            <a href="#" class="hidden on-editing save-row"><i class="fas fa-save"></i></a>
+                            <a href="#" class="hidden on-editing cancel-row"><i class="fas fa-times"></i></a>
+                            <a href="#" class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="#" class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr data-item-id="8">
+                        <td>Общежитие №8</td>
+                        <td>
+                            улица Флорилор 4B
+                        </td>
+                        <td>3200-3900 лей/г</td>
+                        <td class="actions">
+                            <a href="#" class="hidden on-editing save-row"><i class="fas fa-save"></i></a>
+                            <a href="#" class="hidden on-editing cancel-row"><i class="fas fa-times"></i></a>
+                            <a href="#" class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="#" class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr data-item-id="9">
+                        <td>Общежитие №9</td>
+                        <td>
+                            улица Флорилор 4B
+                        </td>
+                        <td>3250-3500 лей/г</td>
+                        <td class="actions">
+                            <a href="#" class="hidden on-editing save-row"><i class="fas fa-save"></i></a>
+                            <a href="#" class="hidden on-editing cancel-row"><i class="fas fa-times"></i></a>
+                            <a href="#" class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="#" class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr data-item-id="10">
+                        <td>Общежитие №10</td>
+                        <td>
+                            улица Студентов 5
+                        </td>
+                        <td>4750-5150 лей/г</td>
+                        <td class="actions">
+                            <a href="#" class="hidden on-editing save-row"><i class="fas fa-save"></i></a>
+                            <a href="#" class="hidden on-editing cancel-row"><i class="fas fa-times"></i></a>
+                            <a href="#" class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="#" class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr data-item-id="11">
+                        <td>Общежитие №11</td>
+                        <td>
+                            улица Студентов 1
+                        </td>
+                        <td>5890-6100 лей/г</td>
+                        <td class="actions">
+                            <a href="#" class="hidden on-editing save-row"><i class="fas fa-save"></i></a>
+                            <a href="#" class="hidden on-editing cancel-row"><i class="fas fa-times"></i></a>
+                            <a href="#" class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="#" class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr data-item-id="12">
+                        <td>Общежитие №12</td>
+                        <td>
+                            улица Студентов 7/2
+                        </td>
+                        <td>5890-6100 лей/г</td>
+                        <td class="actions">
+                            <a href="#" class="hidden on-editing save-row"><i class="fas fa-save"></i></a>
+                            <a href="#" class="hidden on-editing cancel-row"><i class="fas fa-times"></i></a>
+                            <a href="#" class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="#" class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr data-item-id="13">
+                        <td>Общежитие №13</td>
+                        <td>
+                            улица Студентов 3/2
+                        </td>
+                        <td>5890-6100 лей/г</td>
+                        <td class="actions">
+                            <a href="#" class="hidden on-editing save-row"><i class="fas fa-save"></i></a>
+                            <a href="#" class="hidden on-editing cancel-row"><i class="fas fa-times"></i></a>
+                            <a href="#" class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="#" class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <!-- end: page -->
+</section>
