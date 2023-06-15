@@ -1,17 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using eUseControl.BusinessLogic.Service;
+using eUseControl.Controllers;
+using eUseControl.Web.Models;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
-namespace eUseControl.Web.Controllers
+namespace eUseControl.Controllers
 {
-    public class MyProfileController : Controller
+    public class MyProfileController : BaseController
     {
         // GET: MyProfile
         public ActionResult Index()
         {
-            return View();
+            using (var postsService = new Forum())
+            {
+                var postsResp = postsService.GetAll();
+                if (!postsResp.Success)
+                    return HttpNoPermission();
+                return View();
+            }
         }
     }
 }

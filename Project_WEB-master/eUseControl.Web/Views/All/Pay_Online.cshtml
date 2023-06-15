@@ -1,0 +1,143 @@
+﻿﻿@{
+    ViewBag.Title = "Оплата онлайн";
+}
+
+@using System.Web.Optimization
+
+<section role="main" class="content-body">
+    <header class="page-header">
+        <h2>Онлайн оплата</h2>
+
+        <div class="right-wrapper text-end">
+            <ol class="breadcrumbs">
+                <li>
+                    <a href="index.html">
+                        <i class="bx bx-home-alt"></i>
+                    </a>
+                </li>
+
+                <li><span>Оплата общежития</span></li>
+
+                <li><span>Онлайн оплата</span></li>
+
+            </ol>
+
+            <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fas fa-chevron-left"></i></a>
+        </div>
+    </header>
+
+    <!-- start: page -->
+
+    <section class="card">
+        <div class="card-body">
+            <div class="invoice">
+                <header class="clearfix">
+                    <div class="row">
+                        <div class="col-sm-6 mt-3">
+                            <h2 class="h2 mt-0 mb-1 text-dark font-weight-bold">Пример заполнения бланка</h2>
+                        </div>
+                        <div class="col-sm-6 text-end mt-3 mb-3">
+                            <address class="ib me-5">
+                                MD 2005 Республика Молдова
+                                <br />
+                                мун.Кишинёв,
+                                улица Константин Тэнасе 9/1
+                                <br />
+                                Телефон: +373 22 45 06 03
+                                <br />
+                                aib@maib.md
+                            </address>
+                            <div class="ib">
+                                <img src="img/invoice1-logo.png" width="168" height="42" />
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <table class="table table-responsive-md invoice-items">
+                    <thead>
+                        <tr class="text-dark">
+                            <th id="cell-id" class="font-weight-semibold">#</th>
+                            <th id="cell-item" class="font-weight-semibold">Раздел</th>
+                            <th id="cell-desc" class="font-weight-semibold">Пример заполнения</th>
+                            <th id="cell-price" class="text-center font-weight-semibold"></th>
+                            <th id="cell-qty" class="text-center font-weight-semibold"></th>
+                            <th id="cell-total" class="text-center font-weight-semibold"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="font-weight-semibold text-dark">Платежи</td>
+                            <td>Открытие платежа UTM (Studii Cazare Alte Plati)</td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="font-weight-semibold text-dark">UTM (Studii Cazare Alte Plati)</td>
+                            <td>Ввод стоимости вашего общежития</td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="font-weight-semibold text-dark">N.P.P.</td>
+                            <td>Введите ФИО</td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="font-weight-semibold text-dark">Cod fiscal</td>
+                            <td>Введите вашего IDNP булетини</td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="font-weight-semibold text-dark">Facultatea</td>
+                            <td>Введите названия факультета, в котором обучаетесь</td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="font-weight-semibold text-dark">Anul de studii</td>
+                            <td>Введите год обучения</td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td class="font-weight-semibold text-dark">Camin/Odaie</td>
+                            <td>Введите номер общежития и комнату, которую хотите оплатить</td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td class="font-weight-semibold text-dark">Destinatie</td>
+                            <td>Введите цель оплаты (Studii,Cazare si etc.)</td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-grid gap-3 d-md-flex justify-content-md-end me-4">
+                <a href="https://www.maib.md/ru" target="_blank" class="btn btn-primary ms-3">Оплатить</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- end: page -->
+</section>

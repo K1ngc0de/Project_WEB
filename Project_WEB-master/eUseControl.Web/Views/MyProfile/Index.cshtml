@@ -1,10 +1,10 @@
-﻿@{
-    Layout = "~/Views/Shared/_LayoutMyProfile.cshtml";
+﻿﻿@{
     ViewBag.Title = "MyProfile";
 }
 
 @using System.Web.Optimization
-@model eUseControl.Web.Models.DataRequest
+ ﻿@using eUseControl.Web.Extensions
+
 
 <section role="main" class="content-body">
     <header class="page-header">
@@ -28,15 +28,26 @@
         </div>
     </header>
 
-    <div class="row">
+    <div class="row" style="padding-top:60px;">
         <div class="col-lg-4 col-xl-3 mb-4 mb-xl-0">
 
             <section class="card">
                 <div class="card-body">
                     <div class="thumb-info mb-3">
-                        <img src="img/user.jpg" class="rounded img-fluid" alt="John Doe">
                         <div class="thumb-info-title">
-                            <span class="thumb-info-inner">Игорь Войтенко</span>
+                            <span class="thumb-info-inner">
+                                @if (Session.IsUserLoggedIn())
+                                {
+                                    <span class="user_info">
+                                        <span class="name">@ViewBag.SessionUser.Name</span>
+                                        <span class="role">
+                                            @ViewBag.SessionUser.Role
+
+                                        </span>
+
+                                    </span>
+                                }
+                            </span>
                             <span class="thumb-info-type">SI-212</span>
                         </div>
                     </div>
@@ -63,7 +74,18 @@
                                             <label class="todo-label" for="todoListItem5"><span>Курс : 2</span></label>
                                         </li>
                                         <li>
-                                            <label class="todo-label" for="todoListItem6"><span>Корпоративная почта : evghenii.bondarciuc@isa.utm.md</span></label>
+                                            <label class="todo-label" for="todoListItem6">
+                                                <span class="thumb-info-inner">
+                                            @if (Session.IsUserLoggedIn())
+                                            {
+                                                <span class="user_info">
+                                                    <span class="name">@ViewBag.SessionUser.Email</span>
+                                                    
+                                        
+                                                </span>
+                                            }
+                                                </span>
+                                            </label>
                                         </li>
                                     </ul>
                                 </div>
@@ -266,6 +288,6 @@
                 </div>
             </section>
         </div>
-        </div>
+    </div>
     <!-- end: page -->
 </section>

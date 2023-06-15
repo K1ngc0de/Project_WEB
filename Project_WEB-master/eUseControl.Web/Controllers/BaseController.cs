@@ -1,52 +1,49 @@
-﻿using eUseControl.BusinessLogic.Interfaces;
-using System;
-using System.Linq;
+﻿using eUseControl.BusinessLogic.Service;
+using eUseControl.Domain.Entities;
+using eUseControl.Web.Extensions;
 using System.Web.Mvc;
-using eUseControl.Web.Extension;
 
-namespace eUseControl.Web.Controllers
+namespace eUseControl.Controllers
 {
-    public class BaseController : Controller
-    {
-        private readonly ISession _session;
+	public abstract class BaseController : Controller
+	{
+		public const string SESSION_COOKIE_NAME = "SessionToken";
 
-        public BaseController()
-        {
-            var bl = new BusinessLogic.BusinessLogic();
-            _session = bl.GetSessionBL();
-        }
+		public HttpStatusCodeResult HttpNoPermission() => new HttpStatusCodeResult(403);
 
-        public void SessionStatus()
-        {
-            var apiCookie = Request.Cookies["X-KEY"];
-            if (apiCookie != null)
-            {
-                var profile = _session.GetUserByCookie(apiCookie.Value);
-                if (profile != null)
-                {
-                    System.Web.HttpContext.Current.SetMySessionObject(profile);
-                    System.Web.HttpContext.Current.Session["LoginStatus"] = "login";
+		protected override void OnActionExecuting(ActionExecutingContext filterContext)
+		{
+			var sessionCookie = Request.Cookies[SESSION_COOKIE_NAME];
+			if (sessionCookie == null)
+				return;
+
+			using (var sessionService = new SessionService())
+			{
+				var token = sessionCookie.Value;
+				var sessionResp = sessionService.GetByToken(token);
+				if (!sessionResp.Success)
+					return;
+
+				var session = sessionResp.Entry;
+				if (session == null)
+					return;
+
+				using (var userService = new UserService())
+				{
+                    var userResp = userService.Get(session.UserId);
+                    if (!userResp.Success)
+						return;
+
+                    var user = userResp.Entry;
+                    if (user == null)
+                        return;
+
+                    Session.SetUser(user);
+                    ViewBag.SessionUser = user;
                 }
-                else
-                {
-                    System.Web.HttpContext.Current.Session.Clear();
-                    if (ControllerContext.HttpContext.Request.Cookies.AllKeys.Contains("X-KEY"))
-                    {
-                        var cookie = ControllerContext.HttpContext.Request.Cookies["X-KEY"];
-                        if (cookie != null)
-                        {
-                            cookie.Expires = DateTime.Now.AddDays(-1);
-                            ControllerContext.HttpContext.Response.Cookies.Add(cookie);
-                        }
-                    }
+			}
 
-                    System.Web.HttpContext.Current.Session["LoginStatus"] = "logout";
-                }
-            }
-            else
-            {
-                System.Web.HttpContext.Current.Session["LoginStatus"] = "logout";
-            }
-        }
-    }
+			base.OnActionExecuting(filterContext);
+		}
+	}
 }

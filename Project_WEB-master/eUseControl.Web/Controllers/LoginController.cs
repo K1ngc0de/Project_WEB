@@ -1,6 +1,4 @@
-﻿using eUseControl.BusinessLogic.Interfaces;
-using eUseControl.BusinessLogic;
-using eUseControl.Domain.Entities.Users;
+﻿using eUseControl.BusinessLogic.Service;
 using eUseControl.Web.Models;
 using System;
 using System.Collections.Generic;
@@ -8,56 +6,49 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace eUseControl.Web.Controllers
+namespace eUseControl.Controllers
 {
-    public class LoginController : Controller
-    {
-        private readonly ISession _session;
-        public LoginController()
-        {
-            var bl = new BusinessLogic.BusinessLogic();
-            _session = bl.GetSessionBL();
-        }
-
         // GET: Login
-        public ActionResult Index()
-
+        public class LoginController : BaseController
         {
-
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Index(UserLogin login)
-        {
-            if (ModelState.IsValid)
+            // GET /Auth/Login
+            public ActionResult Login()
             {
-                ULoginData data = new ULoginData
-                {
-                    Credetial = login.Email,
-                    Password = login.Password,
-                    LoginIp = Request.UserHostAddress,
-                    LoginDataTime = DateTime.Now
-                };
-
-                TempData["UserName"] = login.Email;
-
-                var userLogin = _session.UserLogin(data);
-                if (userLogin.Status)
-                {
-                    HttpCookie cookie = _session.GenCookie(login.Email);
-                    ControllerContext.HttpContext.Response.Cookies.Add(cookie);
-                    return RedirectToAction("Index", "Home", data);
-                }
-                else
-                {
-                    ModelState.AddModelError("", userLogin.StatusMsg);
-                    return View();
-                }
+                return View();
             }
 
-            return View();
+            // POST /Auth/Login
+            [HttpPost]
+            public ActionResult Login(LoginForm form)
+            {
+                if (ModelState.IsValid)
+                {
+                    var data = new AuthService.LoginData()
+                    {
+                        Email = form.Email,
+                        Password = form.Password,
+                        IpAddress = Request.UserHostAddress,
+                        Time = DateTime.Now
+                    };
+
+                    var accountService = new AuthService();
+                    var loginResp = accountService.Login(data);
+                    if (loginResp.Success)
+                    {
+                        var session = loginResp.Entry;
+
+                        // Create Cookie.
+                        var cookie = new HttpCookie(SESSION_COOKIE_NAME, session.Token);
+                        cookie.Expires = DateTime.Now.AddDays(1);
+                        Response.Cookies.Add(cookie);
+
+                        return Redirect("/");
+                    }
+
+                    ModelState.AddModelError("Password", loginResp.Message);
+                }
+
+                return View(form);
+            }
         }
-    }
 }

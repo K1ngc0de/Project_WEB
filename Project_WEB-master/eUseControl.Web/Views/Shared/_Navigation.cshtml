@@ -1,151 +1,165 @@
-﻿    <!-- start: sidebar -->
-<nav>
-    <aside id="sidebar-left" class="sidebar-left">
+﻿     ﻿@using eUseControl.Web.Extensions
+    <!-- start: sidebar -->
+    <nav>
+        <aside id="sidebar-left" class="sidebar-left">
 
-        <div class="sidebar-header">
-            <div class="sidebar-title">
-                Navigation
+            <div class="sidebar-header">
+                <div class="sidebar-title">
+                    Navigation
+                </div>
+                <div class="sidebar-toggle d-none d-md-block" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+                    <i class="fas fa-bars" aria-label="Toggle sidebar"></i>
+                </div>
             </div>
-            <div class="sidebar-toggle d-none d-md-block" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
-                <i class="fas fa-bars" aria-label="Toggle sidebar"></i>
-            </div>
-        </div>
 
-        <div class="nano">
-            <div class="nano-content">
-                <nav id="menu" class="nav-main" role="navigation">
+            <div class="nano">
+                <div class="nano-content">
+                    <nav id="menu" class="nav-main" role="navigation">
 
-                    <ul class="nav nav-main">
-                        <li>
-                            @Html.ActionLink("HOME", "Index", "Home")
-                        </li>
+                        <ul class="nav nav-main">
+                            <li>
+                                @Html.ActionLink("HOME", "Index", "Home")
+                            </li>
 
-                        <li class="nav-parent">
-                            <a class="nav-link" href="#">
-                                <i class="bx bx-map" aria-hidden="true"></i>
-                                <span>Общежития</span>
-                            </a>
-                            <ul class="nav nav-children">
-                                <li>
-                                    @Html.ActionLink("Общежитие №1", "Index", "Campus1")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Общежитие №2", "Index", "Campus1")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Общежитие №3", "Index", "Campus1")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Общежитие №4", "Index", "Campus1")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Общежитие №5", "Index", "Campus1")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Общежитие №6", "Index", "Campus1")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Общежитие №7", "Index", "Campus1")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Общежитие №8", "Index", "Campus1")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Общежитие №9", "Index", "Campus1")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Общежитие №9", "Index", "Campus1")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Общежитие №10", "Index", "Campus1")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Общежитие №11", "Index", "Campus1")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Общежитие №12", "Index", "Campus1")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Общежитие №13", "Index", "Campus1")
-                                </li>
-                            </ul>
-                        </li>
+                            <li class="nav-parent">
+                                <a class="nav-link" href="#">
+                                    <i class="bx bx-map" aria-hidden="true"></i>
+                                    <span>Общежития</span>
+                                </a>
+                                <ul class="nav nav-children">
+                                    <li>
+                                        @Html.ActionLink("Общежитие №1", "Index", "All")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Общежитие №2", "Index", "All")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Общежитие №3", "Index", "All")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Общежитие №4", "Index", "All")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Общежитие №5", "Index", "All")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Общежитие №6", "Index", "All")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Общежитие №7", "Index", "All")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Общежитие №8", "Index", "All")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Общежитие №9", "Index", "All")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Общежитие №9", "Index", "All")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Общежитие №10", "Index", "All")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Общежитие №11", "Index", "All")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Общежитие №12", "Index", "All")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Общежитие №13", "Index", "All")
+                                    </li>
+                                </ul>
+                            </li>
 
 
-                        <li class="nav-parent">
-                            <a class="nav-link" href="#">
-                                <i class="bx bx-collection" aria-hidden="true"></i>
-                                <span>Регистрация</span>
-                            </a>
-                            <ul class="nav nav-children">
-                                <li>
-                                    @Html.ActionLink("Register", "Index", "Register")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Login", "Index", "Login")
-                                </li>
-                            </ul>
-                        </li>
+                            <li class="nav-parent">
+                                <a class="nav-link" href="#">
+                                    <i class="bx bx-collection" aria-hidden="true"></i>
+                                    <span>Личная информация</span>
+                                </a>
+                                <ul class="nav nav-children">
 
-                        
-                        <li class="nav-parent">
-                            <a class="nav-link" href="#">
-                                <i class="bx bx-detail" aria-hidden="true"></i>
-                                <span>Личные документы</span>
-                            </a>
-                            <ul class="nav nav-children">
-                                <li>
-                                    @Html.ActionLink("Необходимо иметь при заселении", "Index", "Document")
+                                    <li>
+                                        @if (Session.UserHasRole(eUseControl.Domain.Entities.UserRole.Admin))
+                                        {
+                                        
+                                    }
                                 </li>
-                                <li>
-                                    <a href="#">Договор о проживании</a>
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Состояние комнаты при заселении", "Index", "Invoice")
-                                </li>
-                            </ul>
-                        </li>
 
-                        <li class="nav-parent">
-                            <a class="nav-link" href="#">
-                                <i class="bx bx-cart-alt" aria-hidden="true"></i>
-                                <span>Оплата общежития</span>
-                            </a>
-                            <ul class="nav nav-children">
-                                <li>
-                                    @Html.ActionLink("Оплата онлайн", "Index", "Invoice")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Оплата оффлайн", "Index", "OfflinePay")
-                                </li>
-                            </ul>
-                        </li>
 
-                        <li class="nav-parent">
-                            <a class="nav-link" href="#">
-                                <i class="bx bx-cube" aria-hidden="true"></i>
-                                <span>Цены проживания</span>
-                            </a>
-                            <ul class="nav nav-children">
-                                <li>
-                                    @Html.ActionLink("Лиценциат", "Index", "Price")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Мастерат", "Index", "Price")
-                                </li>
-                            </ul>
-                        </li>
 
-                        <li>
-                            <a>
-                                @Html.ActionLink("Admin", "Index", "Admin")
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                                <li>
+                                    @if (Session.UserHasRole(eUseControl.Domain.Entities.UserRole.User))
+                                    {
+                                    <li>@Html.ActionLink("MyProfile", "Index", "MyProfile")</li>
+                                }
+                                    </li>
+                                    </li>
+                                </ul>
+
+
+
+                                <li class="nav-parent">
+                                    <a class="nav-link" href="#">
+                                        <i class="bx bx-detail" aria-hidden="true"></i>
+                                        <span>Личные документы</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            @Html.ActionLink("Необходимо иметь при заселении", "Index", "Docx")
+                                        </li>
+                                        <li>
+                                            <a href="#">Договор о проживании</a>
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("Состояние комнаты при заселении", "", "")
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-parent">
+                                    <a class="nav-link" href="#">
+                                        <i class="bx bx-cart-alt" aria-hidden="true"></i>
+                                        <span>Оплата общежития</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            @Html.ActionLink("Оплата онлайн", "Index", "Pay_Online")
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("Оплата оффлайн", "Index", "Pay_Offline")
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-parent">
+                                    <a class="nav-link" href="#">
+                                        <i class="bx bx-cube" aria-hidden="true"></i>
+                                        <span>Цены проживания</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            @Html.ActionLink("Лиценциат", "Index", "Price_Lyceum")
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("Мастерат", "Index", "Price_Master")
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    @if (Session.UserHasRole(eUseControl.Domain.Entities.UserRole.Admin))
+                                    {
+                                    <li>@Html.ActionLink("Admin", "Users", "Admin")</li>
+                                }
+                                </li>
+
+
+                                </nav>
                 </div>
             </div>
         </aside>
-    <!-- end: sidebar -->
-</nav>
+        <!-- end: sidebar -->
+    </nav>
 

@@ -1,0 +1,53 @@
+﻿@model eUseControl.Web.Models.RegisterForm
+
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<section class="body-sign">
+    <div class="center-sign">
+        <a href="/" class="logo float-left">
+            <img src="~/img/logo3.png" height="60" alt="UTM" />
+        </a>
+
+        <div class="panel card-sign">
+            <div class="card-body">
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <h1 title="Please, fill in all the empty fields">Registration</h1>
+                    @Html.ValidationMessage("")
+                    <div class="group">
+                        @Html.LabelFor(x => x.Email)
+                        @Html.EditorFor(x => x.Email)
+                        @Html.ValidationMessageFor(x => x.Email)
+                    </div>
+                    <div class="group">
+                        @Html.LabelFor(x => x.Name)
+                        @Html.EditorFor(x => x.Name)
+                        @Html.ValidationMessageFor(x => x.Name)
+                    </div>
+                    <div class="group">
+                        @Html.LabelFor(x => x.Password)
+                        @Html.PasswordFor(x => x.Password)
+                        @Html.ValidationMessageFor(x => x.Password)
+                    </div>
+                    <div class="group">
+                        @Html.LabelFor(x => x.PasswordConfirm)
+                        @Html.PasswordFor(x => x.PasswordConfirm)
+                        @Html.ValidationMessageFor(x => x.PasswordConfirm)
+                    </div>
+                    <div class="group button_container">
+                        <b><button>Registration</button></b>
+                    </div>
+                    <div class="group">
+                        @Html.ActionLink("Already have an account?", "Login")
+                    </div>
+                }
+                </div>
+</div>
+</div>
+</section>

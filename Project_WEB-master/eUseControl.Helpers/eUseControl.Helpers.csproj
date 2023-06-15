@@ -63,9 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CookieGenerator.cs" />
-    <Compile Include="LoginHelper.cs" />
-    <Compile Include="MailHelper.cs" />
+    <Compile Include="AuthHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
